@@ -1,0 +1,60 @@
+.partners {
+    padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: $marginTop;
+    width: 90%;
+
+    @include lg {
+        width: 58%;
+    }
+    gap: 24px;
+    > .badge-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 64px;
+        > .badge {
+            height: 50px;
+            width: 33%;
+            @include md {
+                width: 20%;
+            }
+            @include xl {
+                width: 13%;
+            }
+            padding: 6px 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(233, 232, 232);
+            border-radius: 4px;
+            transition: all ease-in-out 0.3s;
+            &:hover {
+                transform: scale(1.05);
+            }
+            > img {
+                max-width: 70%;
+                object-fit: contain;
+                max-height: 80%;
+            }
+        }
+    }
+    > .button-wrapper {
+        display: flex;
+        gap: 24px;
+        height: 40px;
+        align-items: center;
+        margin-bottom: 64px;
+        > button {
+            font-size: $font-lg;
+        }
+        > p {
+            font-size: $font-xl;
+        }
+    }
+}

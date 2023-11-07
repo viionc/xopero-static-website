@@ -1,0 +1,95 @@
+.solutions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 230px auto;
+    justify-items: center;
+    width: 100%;
+    position: relative;
+    min-height: 520px;
+    margin: $marginTop;
+    @include lg {
+        display: grid;
+    }
+    > div {
+        display: flex;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 1;
+        align-items: center;
+        width: 80%;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding-bottom: 32px;
+        @include lg {
+            padding-bottom: 0px;
+            text-align: start;
+            width: 53%;
+        }
+        @include md {
+            flex-direction: row;
+        }
+        > h2 {
+            font-size: $font-xxl;
+            font-weight: 500;
+            width: $w-full;
+            @include lg {
+                width: 41%;
+            }
+        }
+        > p {
+            width: $w-full;
+            @include lg {
+                width: $w-half;
+            }
+            font-size: $font-sm;
+            font-weight: $font-bold;
+        }
+    }
+    > article {
+        grid-row: 2;
+        grid-column: 2;
+        border-radius: 12px;
+        box-shadow: $shadow-md;
+        width: 60%;
+        position: relative;
+        padding: 44px;
+        @include lg {
+            padding: 85px;
+            width: 100%;
+        }
+        > img {
+            position: absolute;
+            z-index: 2;
+            left: 20px;
+            top: 30px;
+            @include lg {
+                left: 40px;
+                top: 48px;
+            }
+        }
+        > p {
+            width: $w-full;
+            position: relative;
+            z-index: 100;
+            margin: 0;
+            font-size: $font-larger;
+            @include lg {
+                width: 45%;
+                font-size: $font-xl;
+            }
+        }
+        > div {
+            > p {
+                margin: 0;
+            }
+            > p:nth-child(1) {
+                font-weight: $font-bold;
+                margin-top: 24px;
+            }
+        }
+    }
+}

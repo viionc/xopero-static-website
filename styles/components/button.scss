@@ -1,0 +1,25 @@
+.btn {
+    padding: 14px;
+    border-radius: none;
+    border: none;
+    color: white;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.btn.rounded {
+    border-radius: 4px;
+}
+.btn.shadow {
+    box-shadow: $shadow-button;
+}
+
+.btn.red {
+    background-color: rgb(226, 49, 16);
+}
+.btn.white {
+    background-color: white;
+    font-weight: 600;
+}

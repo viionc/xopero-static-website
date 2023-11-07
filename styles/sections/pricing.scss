@@ -1,0 +1,55 @@
+.pricing {
+    padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    margin: $marginTop;
+
+    > article {
+        display: flex;
+        width: 78%;
+        gap: 64px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include xxl {
+            flex-wrap: nowrap;
+        }
+        .card {
+            border-radius: 25% 0% 25% 0%;
+            height: 240px;
+            padding: 48px 36px;
+            width: 211px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            > h3 {
+                font-size: $font-xl;
+                font-weight: $font-thin;
+                margin: 12px 0;
+            }
+            > p {
+                font-size: $font-xs;
+                margin: 16px 0;
+            }
+            > button {
+                width: $w-half;
+                padding: 8px;
+                font-size: $font-xs;
+            }
+        }
+        .card:nth-child(odd) {
+            background: linear-gradient(to right, rgb(0, 0, 0), rgb(25, 25, 25));
+            > button {
+                color: black;
+            }
+        }
+        .card:nth-child(even) {
+            background: linear-gradient(to right, #146291, #1876b0);
+            > button {
+                color: #146291;
+            }
+        }
+    }
+}

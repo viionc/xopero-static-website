@@ -1,0 +1,12 @@
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+}
+.circle.full {
+    background-color: #1876b0;
+}
+.circle.empty {
+    background-color: #c6ddeb;
+}
